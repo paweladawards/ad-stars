@@ -1,0 +1,500 @@
+@font-face {
+  font-family: "Apple";
+  src: url(../font/sfpro/truetype/SFProDisplay-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "AppleBold";
+  src: url(../font/sfpro/truetype/SFProDisplay-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url(../font/hk-grotesk/HKGrotesk-Regular.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Bebas Neue";
+    src: url(../font/Bebas_Neue/BebasNeue-Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "TT Norms";
+    src: url(../font/TT-Norms-Fonts/TTNorms-Regular.otf) format("truetype");
+  }
+
+  /* Animations */
+
+  @keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }   
+    100%{
+        opacity: 1;
+    }
+  }
+
+  /**Styling scrollable elements*/
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 1000ms;
+  }
+  
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+  
+  .scrolled.fade-in {
+    animation: fade-in 1s ease-in-out both;
+  }
+  
+  .scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+  }
+  
+  .scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+  }
+  
+  .scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+  }
+
+/* Scroll to Top */
+
+
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 21px; /* Place the button at the bottom of the page */
+    right: 80px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ff0404 !important; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 24px; /* Increase font size */
+    padding: 4px 10px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+header {
+    height: 50px;
+}
+body {
+    background: #fafafa;
+    font-family: 'HK Grotesk', sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.baner_heading{
+        color: #fff;
+}
+
+.baner_subheading{
+    color: #fff;
+}
+
+.baner-bg{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 960px;
+}
+
+.sticky {
+    min-height: 76px !important;
+}
+.font_bold {
+    font-family: 'HK Grotesk', sans-serif;
+}
+h1 {
+    font-size: 2.5rem;
+    font-family: 'TT Norms' !important;
+}
+h3 {
+    font-size: 1.2rem;
+}
+a {
+    color: #6bf;
+}
+section {
+    overflow-x: hidden;
+}
+strong {
+    font-weight: 900!important;
+}
+
+footer.page-footer {
+    border-top: 4px solid #000;
+    font-family: 'TT Norms' !important;
+}
+
+.bg-white {
+    background-color: #fafafa!important;}
+
+.sticky {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 50px;
+    line-height: 50px;
+}
+.container {
+    overflow-x: hidden;
+}
+.special_href {
+    color: #fff;
+}
+.special_href:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.separate_section {
+    position: relative;
+    background-color: #000;
+    height: 4px;
+}
+.separate_section_remove {
+    position: absolute;
+    left: 33.333%;
+    background-color: #000;
+    height: 5px;
+    width: 33.333%;
+}
+.separate_section_alt {
+    position: relative;
+    background-color: #000;
+    height: 4px;
+}
+.separate_section_remove_alt {
+    position: absolute;
+    left: 33.333%;
+    /* background-color: #fff; */
+    height: 4px;
+    width: 33.333%;
+}
+#preloader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 999;
+    top: 0;
+}
+.active {   
+    color: rgba(255,255,255,.75) !important;
+}
+
+.navbar-toggler{
+    margin-top: 16px;
+}
+
+.navbar {
+    /* background-color: #0e1e27 !important; */
+    padding: 0;
+}
+.navbar-nav {
+    max-height: 50px;
+    display: table;
+    margin: 0 auto;
+}
+.nav-item {
+    display: table-cell;
+    padding: 0 35px;
+}
+.nav-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.slider {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.slider_photo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+.full_screen {
+    min-height: calc(100vh - 50px);
+}
+.slider_white {
+    background-color: #FAFAFA;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+.padding_section_bottom {
+    padding-bottom: 120px;
+}
+.padding_section_top {
+    padding-top: 80px
+}
+.font_regular {
+    font-size: 1.2rem;
+}
+.bg-muted {
+    background-color: #FAFAFA;
+}
+.box-left {
+    padding-right: 10px;
+}
+.box-right {
+    padding-left: 10px;
+}
+.bg-photo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.offer_padding {
+    padding-bottom: 300px;
+}
+.bg_footer {
+    background-color: #F5F5F7;
+}
+
+.text-dark{
+    color: #0e1e27 !important;
+} 
+
+.text-muted {
+    color: #ff0404!important;
+}
+
+.fab:hover{
+    color: #ff0404;
+}
+
+.font-small {
+    font-size: .8rem;
+}
+.gallery_photo {
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: zoom-in;
+}
+
+
+@media screen and (max-width:1280px){
+    .baner-bg {
+        height: 854px;
+    }
+
+    .nav-item {
+        padding: 0 26px;
+    }
+}
+
+@media (min-width: 1024px){
+    .offer_img {
+    height: 300px;
+}
+
+
+}
+
+footer.page-footer .footer-copyright {
+    background-color: #313131;
+}
+.slider_subpage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 14vh 0;
+    text-align: center;
+    animation: fadeIn 3s ease-out 0s 1 ;
+}
+.section_padding {
+    padding: 60px 0;
+    text-align: center;
+}
+.icon_size {
+    font-size: 3rem;
+}
+.subpage_title, .subpage_subtitle {
+    /* background-color: rgb(255,255,255, 0.5); */
+    padding: 16px;
+    color:#fafafa;
+    font-size: 3rem;
+    margin-top: .5rem;
+}
+.btn-primary {
+    background-color: #313131 !important;
+}
+.form-check-input[type="checkbox"]:checked + label::before, label.btn input[type="checkbox"]:checked + label::before {
+    border-right: 2px solid #313131;
+    border-bottom: 2px solid #313131;
+}
+.md-form input[type="date"]:focus:not([readonly]), .md-form input[type="datetime-local"]:focus:not([readonly]), .md-form input[type="email"]:focus:not([readonly]), .md-form input[type="number"]:focus:not([readonly]), .md-form input[type="password"]:focus:not([readonly]), .md-form input[type="search-md"]:focus:not([readonly]), .md-form input[type="search"]:focus:not([readonly]), .md-form input[type="tel"]:focus:not([readonly]), .md-form input[type="text"]:focus:not([readonly]), .md-form input[type="time"]:focus:not([readonly]), .md-form input[type="url"]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #313131;
+    border-bottom: 1px solid #313131;
+}
+.md-form input[type="date"]:focus:not([readonly]) + label, .md-form input[type="datetime-local"]:focus:not([readonly]) + label, .md-form input[type="email"]:focus:not([readonly]) + label, .md-form input[type="number"]:focus:not([readonly]) + label, .md-form input[type="password"]:focus:not([readonly]) + label, .md-form input[type="search-md"]:focus:not([readonly]) + label, .md-form input[type="search"]:focus:not([readonly]) + label, .md-form input[type="tel"]:focus:not([readonly]) + label, .md-form input[type="text"]:focus:not([readonly]) + label, .md-form input[type="time"]:focus:not([readonly]) + label, .md-form input[type="url"]:focus:not([readonly]) + label, .md-form textarea.md-textarea:focus:not([readonly]) + label, .modal-dialog.modal-notify.modal-primary .btn.btn-outline-primary .fab, .modal-dialog.modal-notify.modal-primary .btn.btn-outline-primary .far, .modal-dialog.modal-notify.modal-primary .btn.btn-outline-primary .fas {
+    color: #313131;
+}
+.md-form label {
+    color: #313131 !important;
+}
+.info {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    border: 2px solid green;
+        border-top-color: green;
+        border-top-style: solid;
+        border-top-width: 2px;
+    border-top: 0;
+    border-radius: 3px;
+    padding: 10px;
+    z-index: 99999999;
+}
+@media (max-width: 1199.98px) {
+    .baner-bg{
+        height: 640px;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+}
+
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        max-height: 100%;
+        display: flex;
+    }
+    .nav-item {
+        display: table-cell;
+        padding: 5px 15px;
+        text-align: center;
+    }
+    .sticky {
+        display: block;
+    }
+    .offer_padding {
+        padding-bottom: 0;
+    }
+    .baner-bg{
+        height: 480px;
+    }
+}
+@media (max-width: 767.98px) {
+
+
+
+    .h1-responsive {
+        font-size: 250%;
+    }
+    .baner-bg{
+        height: 480px;
+    }
+}
+
+
+@media (min-width: 575.98px) and (max-width: 640px){
+.baner-bg {
+    height: 404px;
+}
+}
+
+@media (max-width: 575.98px) {
+
+    .slider_white {
+        padding: 114px 0;
+    }
+
+
+    .baner_heading{
+        font-size: 1.2rem;
+    }
+
+    .baner_subheading{
+        font-size: 1rem;
+    }
+
+    .baner-bg{
+        height: 328px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .slider {
+        padding-top: 80px;
+    }
+    .padding_section_bottom {
+        padding-bottom: 0px;
+    }
+    .font_regular {
+        font-size: 1rem;
+    }
+    .h1-responsive {
+        font-size: 200%;
+    }
+    .h5-responsive {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 491px){
+    
+    .baner-bg {
+        height: 242px;
+    }
+    
+    .slider_white {
+        padding: 80px 0;
+    }
+    .my-button {
+        font-size: 0.5rem;
+    }
+    
+    }
+
+@media (max-width: 360px){
+    
+.baner-bg {
+    height: 214px;
+}
+
+.slider_white {
+    padding: 64px 0;
+}
+
+.my-button {
+    font-size: 0.5rem;
+}
+
+}
+
+@media (max-width: 320px){
+.baner-bg {
+    height: 188px;
+}
+.slider_white {
+    padding: 32px 0;
+}
+}
