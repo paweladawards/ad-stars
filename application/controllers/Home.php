@@ -62,6 +62,7 @@ class Home extends CI_Controller {
 
 	public function galeria() {
 		$data = loadDefaultDataFront();
+		// $data['gallery'] = $this->back_m->get_images('gallery', 'galeria', 1);
 		$data['gallery'] = $this->back_m->get_images('gallery', 'galeria', 1);
 		echo loadViewsFront('galeria', $data);
 	}

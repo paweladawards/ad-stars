@@ -13,7 +13,7 @@
       <?php foreach ($rows as $v): ?>
       <div class="col-md-6 box-left mb-3">
         <div class="bg-photo p-5" style="background-image: url('<?php echo base_url(); ?>uploads/<?php echo $v->photo; ?>');" title="<?php echo $v->alt; ?>">
-          <h2 class="font_bold h1-responsive"><?php echo $v->title; ?></h2>
+          <h2 class="font_bold h1-responsive blog-header"><?php echo $v->title; ?></h2>
           <?php if($v->subtitle != ''): ?>
           <h4><?php echo $v->subtitle; ?></h4>
           <?php endif; ?>

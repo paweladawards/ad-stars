@@ -81,16 +81,29 @@
         <div class="row d-flex justify-content-center align-items-center mt-5 pt-4">
           <div class=" col-12 col-lg-6 text-center">
               <ul class="list-unstyled mb-0 d-flex flex-column flex-lg-row flex-md-row justify-content-center align-items-center ">
-                  <li class="mx-2 pt-4"><a class="text-dark" href="https://www.google.com/maps/place/<?= $contact->address ?>,+<?= $contact->zip_code ?>+<?= $contact->city; ?>/ " ><i class="fas text-dark fa-map-marker-alt fa-2x"></i>
-                      <p><?php echo $contact->address; ?>, <?php echo $contact->city; ?> <?php echo $contact->zip_code; ?></a></p>
+                  
+
+                  <li class="mx-2">
+                      <a href="tel:<?php echo $contact->phone1; ?>" class="text-dark">
+
+                      <i class="fas fa-phone mt-4 fa-2x"></i>
+                      <!-- <p><?php echo $contact->phone1; ?></p> -->
+                      <p>ZADZWOŃ</p>
+                    </a>
+                  </li>
+
+                  <li class="mx-2 pt-4"><a class="text-dark" href="https://www.google.com/maps/place/<?= $contact->address ?>,+<?= $contact->zip_code ?>+<?= $contact->city; ?>/ " >
+                  <i class="fas text-dark fa-map-marker-alt fa-2x"></i>
+                      <!-- <p><?php echo $contact->address; ?>,<br /> <?php echo $contact->city; ?> <?php echo $contact->zip_code; ?></a></p> -->
+                      <p>ODWIEDŹ NAS</p>
                   </li>
 
                   <li class="mx-2">
-                      <a href="tel:<?php echo $contact->phone1; ?>" class="text-dark"><i class="fas fa-phone mt-4 fa-2x"></i><p><?php echo $contact->phone1; ?></a></p>
-                  </li>
-
-                  <li class="mx-2">
-                      <a href="mailto:<?php echo $contact->email1; ?>" class="text-dark"><i class="fas fa-envelope mt-4 fa-2x"></i><p><?php echo $contact->email1; ?></a></p>
+                    <a href="mailto:<?php echo $contact->email1; ?>" class="text-dark">
+                      <i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <!-- <p><?php echo $contact->email1; ?></p> -->
+                        <p>NAPISZ</p>
+                    </a>
                   </li>
               </ul>
           </div>

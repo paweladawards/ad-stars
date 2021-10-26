@@ -10,7 +10,7 @@
       	<?php if($value->photo != ''): ?>
       	<div class="text-center">
         <picture>
-          <source srcset="<?= base_url().'uploads/'.$value->photo ?>.webp" type="image/webp">
+          <!-- <source srcset="<?= base_url().'uploads/'.$value->photo ?>.webp" type="image/webp"> -->
           <source srcset="<?= base_url().'uploads/'.$value->photo ?>" type="image/jpeg"> 
           <img src="<?= base_url().'uploads/'.$value->photo ?>" class="img-fluid my-3" alt="<?= $value->alt ?>">
         </picture>

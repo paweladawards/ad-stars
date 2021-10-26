@@ -4,6 +4,15 @@ Options -Indexes
 
 RewriteEngine On
 
+Options +FollowSymlinks -Indexes
+RewriteEngine on
+
+DirectoryIndex index.php
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
 
 #Removes access to the system folder by users.
 #Additionally this will allow you to create a System.php controller,

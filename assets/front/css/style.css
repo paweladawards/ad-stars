@@ -25,6 +25,17 @@
 
   /* Animations */
 
+  @keyframes opacity {
+    0%{
+        opacity: 1;
+        filter:invert(0);
+    }   
+    100%{
+        opacity: 0.8;
+        filter:invert(0.2);
+    }
+  }
+
   @keyframes fadeIn {
     0%{
         opacity: 0;
@@ -32,6 +43,15 @@
     100%{
         opacity: 1;
     }
+  }
+
+  @keyframes flip{
+      0%{
+        transform: rotateY(180deg);
+      }
+      100%{
+        transform: rotateY(-180deg);
+      }
   }
 
   /**Styling scrollable elements*/
@@ -67,21 +87,34 @@
   #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-    bottom: 21px; /* Place the button at the bottom of the page */
-    right: 80px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
+    bottom: 64px; /* Place the button at the bottom of the page */
+    left: 49.4%; /* Place the button 30px from the right */
+    z-index: 9999; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #ff0404 !important; /* Set a background color */
-    color: white; /* Text color */
+    background-color: transparent !important; /* Set a background color */
+    color: #ff0404; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     border-radius: 50%; /* Rounded corners */
-    font-size: 24px; /* Increase font size */
-    padding: 4px 10px;
+    font-size: 32px; /* Increase font size */
+    animation: flip 1s ease-in-out 0s 1;
   }
   
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  .btn-primary:hover{
+    background-color: #ff0404 !important; /* Set a background color */
+  }
+
+  .my-hover{
+      cursor: pointer; 
+}
+
+  .my-hover:hover{
+    opacity: 0.9;
+    filter:invert(0.05);
   }
 
 html{
@@ -97,6 +130,18 @@ body {
     font-family: 'HK Grotesk', sans-serif;
     overflow-x: hidden;
     width: 100vw;
+}
+
+
+.blog-header{ 
+
+    padding-top: 128px;
+}
+
+
+.baner-link {
+    font-size: 100% !important;
+    color: #ff0404!important
 }
 
 .baner_heading{
@@ -266,7 +311,7 @@ footer.page-footer {
     height: 100%;
 }
 .offer_padding {
-    padding-bottom: 300px;
+    padding-bottom: 128px;
 }
 .bg_footer {
     background-color: #F5F5F7;
@@ -288,7 +333,7 @@ footer.page-footer {
     font-size: .8rem;
 }
 .gallery_photo {
-    height: 300px;
+    height: 480px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -370,6 +415,13 @@ footer.page-footer .footer-copyright {
     padding: 10px;
     z-index: 99999999;
 }
+
+@media screen and (max-width: 1280px){
+#myBtn {
+    left: 47.7%;
+}
+}
+
 @media (max-width: 1199.98px) {
     .baner-bg{
         height: 640px;
@@ -377,8 +429,10 @@ footer.page-footer .footer-copyright {
 
 }
 
-@media screen and (min-width: 1024px){
-
+@media screen and (max-width: 1024px){
+    #myBtn {
+        left: 47.3%;
+    }
 }
 
 
@@ -396,14 +450,16 @@ footer.page-footer .footer-copyright {
         display: block;
     }
     .offer_padding {
-        padding-bottom: 0;
+        padding-bottom: 96px;
     }
     .baner-bg{
         height: 480px;
     }
 }
 @media (max-width: 767.98px) {
-
+    #myBtn {
+        left: 46.3%;
+    }
 
 
     .h1-responsive {
@@ -422,6 +478,12 @@ footer.page-footer .footer-copyright {
 }
 
 @media (max-width: 575.98px) {
+
+    
+    #myBtn {
+        left: 44.8%; /* Place the button 30px from the right */
+    
+    }
 
     .slider_white {
         padding: 114px 0;
@@ -471,6 +533,11 @@ footer.page-footer .footer-copyright {
     .my-button {
         font-size: 0.5rem;
     }
+
+    #myBtn {
+        left: 42.5%; /* Place the button 30px from the right */
+    
+    }
     
     }
 
@@ -488,6 +555,11 @@ footer.page-footer .footer-copyright {
     font-size: 0.5rem;
 }
 
+#myBtn {
+    left: 42%; /* Place the button 30px from the right */
+
+}
+
 }
 
 @media (max-width: 320px){
@@ -497,4 +569,7 @@ footer.page-footer .footer-copyright {
 .slider_white {
     padding: 32px 0;
 }
+#myBtn {
+    left: 40%; /* Place the button 30px from the right */
+
 }

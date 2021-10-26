@@ -18,7 +18,7 @@
           <a href="<?php echo create_link('oferta_wpis', $v->title, $v->id); ?>" class="font-weight-bold h5-responsive mr-4">Dowiedź się więcej <i class="ml-2 fas fa-angle-right"></i></a>
         </div>
         <picture>
-          <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp">
+          <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
           <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> 
           <img src="<?= base_url().'uploads/'.$v->photo ?>" class="img-fluid mt-3 offer_img" alt="<?= $v->alt ?>">
         </picture>

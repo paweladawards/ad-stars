@@ -1,91 +1,66 @@
-<?php if(isset($baner_3)): ?>
-<section class="slider_white pb-0 d-flex justify-content-center align-items-lg-center align-items-sm-center align-items-start baner-bg js-scroll" style="background-color: <?php echo $baner_3->color; ?>; background-image:url('<?= base_url().'uploads/'.$baner_3->photo ?>');">
-<div class="col-12 w-100">
-  <div class="col-lg-6 col-sm-6 col-12 p-4">
-  <h1 class="font_bold baner_heading"><?php echo $baner_3->title; ?></h1>
-  <h3 class="baner_subheading" ><?php echo $baner_3->subtitle; ?></h3>
-  <div>
-    <?php if($baner_3->link != '' && $baner_3->link_text != ''): ?>
-    <a href="<?php echo $baner_3->link; ?>" class="font-weight-bold h5-responsive mr-4" style="color: #ff0404!important"><?php echo $baner_3->link_text; ?> <i class="ml-2 fas fa-angle-right"></i></a>
-    <?php endif; ?>
-  </div>
-  </div>
-</div>  
+<!-- BANERY -->
+<?php if(!empty($baners)): ?>
 
-  <!-- <?php if($baner_3->photo != ''): ?> -->
-      <picture>
-        <!-- <source srcset="<?= base_url().'uploads/'.$baner_3->photo ?>.webp" type="image/webp"> -->
-        <!-- <source srcset="<?= base_url().'uploads/'.$baner_3->photo ?>" type="image/jpeg">
-        <img src="<?= base_url().'uploads/'.$baner_3->photo ?>" alt="<?= $baner_3->alt ?>" class="img-fluid"> -->
-      </picture>
-  <!-- <?php endif; ?> -->
-</section>
-<?php endif; ?>
+  <?php foreach(array_reverse($baners) as $baner): ?>
 
-<?php if(isset($baner_2)): ?>
-<section class="slider_white pb-0 d-flex justify-content-center align-items-lg-center align-items-sm-center align-items-start pt-8 pb-0  baner-bg js-scroll" style="background-image:url('<?= base_url().'uploads/'.$baner_2->photo ?>');">
-  <div class="col-12 w-100 d-flex flex-row justify-content-lg-end justify-content-md-end justify-content-center">
-  <div class="col-lg-6 col-sm-6 col-12 p-4">
-  <h1 class="font_bold baner_heading"><?php echo $baner_2->title; ?></h1>
-  <h3 class="baner_subheading" ><?php echo $baner_2->subtitle; ?></h3>
-  <div>
-    <?php if($baner_2->link != '' && $baner_2->link_text != ''): ?>
-    <a href="<?php echo $baner_2->link; ?>" class="font-weight-bold h5-responsive mr-4" style="color: #ff0404!important"><?php echo $baner_2->link_text; ?>  <i class="ml-2 fas fa-angle-right"></i></a>
-    <?php endif; ?>
-  </div>
-  </div>
-</section>
-<?php endif; ?>
-
-<?php if(isset($baner_1)): ?>
-<section class="slider_white pb-0 d-flex justify-content-center align-items-lg-center align-items-sm-center align-items-start pt-8 pb-0  baner-bg js-scroll" style="background-color: <?php echo $baner_1->color; ?>;background-image:url('<?= base_url().'uploads/'.$baner_1->photo ?>'">
-
-    <?php if($baner_1->photo != ''): ?>
-    <?php endif; ?>
-    <div class="col-12 w-100 d-flex flex-row justify-content-lg-start justify-content-md-start justify-content-center">
-  <div class="col-lg-6 col-sm-6 col-12 p-4">
-  <h1 class="font_bold baner_heading"><?php echo $baner_1->title; ?></h1>
-  <h3 class="baner_subheading" ><?php echo $baner_1->subtitle; ?></h3>
-  <div>
-    <?php if($baner_1->link != '' && $baner_1->link_text != ''): ?>
-    <a href="<?php echo $baner_1->link; ?>" class="font-weight-bold h5-responsive mr-4" style="color: #ff0404!important"><?php echo $baner_2->link_text; ?>  <i class="ml-2 fas fa-angle-right"></i></a>
-    <?php endif; ?>
-  </div>
-  </div>
-</section>
-<?php endif; ?>
-<!-- <div class="separate_section">
-  <div class="separate_section_remove"></div>
-</div> -->
-
-
-<section class="slider_white pb-0 bg-white">
-  <div class="row">
-    <?php foreach ($oferta_active as $v): ?>
-    <div class="col-md-6 box-left">
-      <div class="bg-muted p-5">
-        <h2 class="font_bold h1-responsive"><a href="<?php echo create_link('oferta_wpis', $v->title, $v->id); ?>" class="text-dark"><?php echo $v->title; ?></a></h2>
-        <p class="font_regular"><?php echo $v->subtitle; ?></p>
+      <section class="slider_white pb-0 d-flex justify-content-center align-items-lg-center align-items-sm-center align-items-start baner-bg js-scroll" style="background-color: <?php echo $baner->color; ?>; background-image:url('<?= base_url().'uploads/'.$baner->photo ?>');">
+        <div class="col-12 w-100">
+        <div class="col-lg-6 col-sm-6 col-12 p-4">
+        <h1 class="font_bold baner_heading"><?php echo $baner->title; ?></h1>
+        <h3 class="baner_subheading" ><?php echo $baner->subtitle; ?></h3>
         <div>
-          <a href="<?php echo create_link('oferta_wpis', $v->title, $v->id); ?>" class="font-weight-bold h5-responsive mr-4">Dowiedź się więcej <i class="ml-2 fas fa-angle-right"></i></a>
+          <?php if($baner->link != '' && $baner->link_text != ''): ?>
+          <a href="<?php echo $baner->link; ?>" class="font-weight-bold h5-responsive baner-link" style=""><?php echo $baner->link_text; ?> <i class="ml-2 fas fa-angle-right"></i></a>
+          <?php endif; ?>
+        </div>
+        </div>
+      </div>  
+      </section>
+  <?php endforeach; ?>
+<?php endif; ?>
+
+
+<!-- OFERTA WPISY -->
+<section class="slider_white pb-0 bg-white js-scroll">
+  <div class="row d-flex justify-content-center" >
+  <h2 class="font_bold  mt-4 mb-4 pb-4 pt-4 text-dark display-4">NASZA OFERTA</h2>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <?php if(!empty($oferta_active) && is_array($oferta_active)): ?>
+    <?php foreach ($oferta_active as $v): ?>
+    <div class="col-md-6 box-left p-0 m-0">
+      <div class=" p-4 mt-2 mb-2" style="background-color:#fafafa;">
+        <h2 class="font_bold h1-responsive text-white">
+          <a href="<?php echo create_link('oferta_wpis', $v->title, $v->id); ?>" class="text-dark"><?php echo $v->title; ?>
+      </a>
+    </h2>
+        <p class="font_regular text-dark"><?php echo $v->subtitle; ?></p>
+        <div>
+          <a href="<?php echo create_link('oferta_wpis', $v->title, $v->id); ?>" class="font-weight-bold h5-responsive baner-link">Dowiedź się więcej <i class="ml-2 fas fa-angle-right"></i></a>
         </div>
       <picture>
         <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
-        <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> -->
+        <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg">
+        <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/png">
         <img src="<?= base_url().'uploads/'.$v->photo ?>" alt="<?= $v->alt ?>" class="img-fluid mt-3 offer_img">
       </picture>
       </div>
     </div>
-    <?php endforeach ?>
+    <?php endforeach; ?>
+    <?php endif; ?>
   </div>
 </section>
-
-<section class="slider_white pb-0 bg-white text-white">
-  <div class="row">
+<!-- BLOG SECTION -->
+<section class="slider_white pb-0 bg-white text-white js-scroll">
+  <div class="row d-flex justify-content-center">
+  <h2 class="font_bold mt-4 mb-4 pb-4 pt-4 text-dark display-4">BLOG</h2>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <?php if(!empty($blog_active) && is_array($blog_active)):  ?>
       <?php foreach ($blog_active as $v): ?>
       <div class="col-md-6 box-left mb-3">
-        <div class="bg-photo p-5" style="background-image: url('<?php echo base_url(); ?>uploads/<?php echo $v->photo; ?>.jpg');" title="<?php echo $v->alt; ?>">
-          <h2 class="font_bold h1-responsive"><?php echo $v->title; ?></h2>
+        <div class="bg-photo p-5 my-hover" style="background-image: url('<?php echo base_url(); ?>uploads/<?php echo $v->photo; ?>');" title="<?php echo $v->alt; ?>">
+          <h2 class="font_bold h1-responsive blog-header"><?php echo $v->title; ?></h2>
           <?php if($v->subtitle != ''): ?>
           <h4><?php echo $v->subtitle; ?></h4>
           <?php endif; ?>
@@ -93,10 +68,11 @@
           <p class="px-5 font_regular"><?php echo $v->short_desc; ?></p>
           <?php endif; ?>
           <div class="offer_padding">
-            <a href="<?php echo create_link('blog_wpis', $v->title, $v->id); ?>" class="font-weight-bold special_href font_regular mr-4">Dowiedź się więcej <i class="ml-2 fas fa-angle-right"></i></a>
+            <a href="<?php echo create_link('blog_wpis', $v->title, $v->id); ?>" class="font-weight-bold special_href font_regular baner-link">Dowiedź się więcej <i class="ml-2 fas fa-angle-right"></i></a>
           </div>
         </div>
       </div>
-      <?php endforeach ?>
+      <?php endforeach; ?>
+      <?php endif; ?>
   </div>
 </section>

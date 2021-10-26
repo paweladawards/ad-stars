@@ -3,7 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}/";
 
-$config['base_url'] = strpos($actual_link, 'localhost') > 0 ? $actual_link . 'szablony/szablon_6' : $actual_link;
+// $config['base_url'] = strpos($actual_link, 'localhost') > 0 ? $actual_link . 'ad-stars' : $actual_link;
+$config['base_url'] = 'http://localhost/ad-stars/';
+$config['index_page'] = '';
 
 $config['uri_protocol']	= 'REQUEST_URI';
 
