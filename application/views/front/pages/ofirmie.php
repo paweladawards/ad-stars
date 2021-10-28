@@ -8,18 +8,18 @@
 </div>
 
 <section class="section_padding">
-  <h2 class="font_bold h1-responsive mb-5">Zajmujemy się</h2>
+  <!-- <h2 class="font_bold h1-responsive mb-5">AD STARS</h2> -->
   <div class="row">
     <?php foreach (array_reverse($ikony) as $v): ?>
-    <div class="col-lg-2 col-md-4 col-6 mb-3 mb-lg-0 mx-auto">
+    <div class="col-lg-2 col-md-4 col-6 mb-3 mb-lg-0 mx-auto d-flex flex-column justify-content-center align-items-center">
       <div class="">
       <picture>
-        <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp">
+        <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
         <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> 
         <img src="<?= base_url().'uploads/'.$v->photo ?>" alt="<?= $v->alt ?>">
       </picture>
       </div>
-      <h5><?php echo $v->title; ?></h5>
+      <h2><?php echo $v->title; ?></h2>
       <p class="font-small"><?php echo $v->description; ?></p>
     </div>
     <?php endforeach ?>
@@ -36,7 +36,7 @@
       </div>
       <div class="col-md-6">
       <picture>
-        <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp">
+        <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
         <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> 
         <img src="<?= base_url().'uploads/'.$v->photo ?>" class="img-fluid" alt="<?= $v->alt ?>">
       </picture>
@@ -50,7 +50,7 @@
     <div class="row">
       <div class="col-md-6">
       <picture>
-        <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp">
+        <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
         <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> 
         <img src="<?= base_url().'uploads/'.$v->photo ?>" class="img-fluid" alt="<?= $v->alt ?>">
       </picture>
@@ -70,7 +70,7 @@
     <div class="col-md-6 box-left">
       <div class="p-5">
       <picture>
-        <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp">
+        <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
         <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> 
         <img src="<?= base_url().'uploads/'.$v->photo ?>" class="img-fluid mt-3" alt="<?= $v->alt ?>">
       </picture>
@@ -89,7 +89,7 @@
 <section class="section_padding  bg-white">
   <div class="container font_regular">
       <picture>
-        <source srcset="<?= base_url().'uploads/'.$sekcja_3->photo ?>.webp" type="image/webp">
+        <!-- <source srcset="<?= base_url().'uploads/'.$sekcja_3->photo ?>.webp" type="image/webp"> -->
         <source srcset="<?= base_url().'uploads/'.$sekcja_3->photo ?>" type="image/jpeg"> 
         <img src="<?= base_url().'uploads/'.$sekcja_3->photo ?>" class="img-fluid" alt="<?= $sekcja_3->alt ?>">
       </picture>

@@ -1,7 +1,7 @@
 <!-- BANERY -->
 <?php if(!empty($baners)): ?>
 
-  <?php foreach($baners as $baner): ?>
+  <?php foreach(array_reverse($baners) as $baner): ?>
 
       <section class="slider_white pb-0 d-flex justify-content-center align-items-lg-center align-items-sm-center align-items-start baner-bg js-scroll" style="background-color: <?php echo $baner->color; ?>; background-image:url('<?= base_url().'uploads/'.$baner->photo ?>');">
         <div class="col-12 w-100">
