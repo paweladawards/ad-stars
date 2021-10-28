@@ -78,7 +78,7 @@
           </div>
         </div>
 
-        <div class="row d-flex justify-content-center align-items-center mt-5 pt-4">
+        <div class="row d-flex justify-content-center align-items-center mt-5 pt-4" style="display: none !important;">
           <div class=" col-12 col-lg-6 text-center">
               <ul class="list-unstyled mb-0 d-flex flex-column flex-lg-row flex-md-row justify-content-center align-items-center ">
                   

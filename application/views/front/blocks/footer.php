@@ -2,7 +2,7 @@
 
 
 
-  <div class="container text-center text-md-left pt-4 pb-3">
+  <div class="container text-center text-md-left pt-4 pb-3 " style="display:none;"> 
     <div class="row">
       <div class="col-md-3 mx-auto">
         <div class="footer_nav font_bold mt-3 mb-4">MENU</div>
@@ -69,7 +69,15 @@
           <!-- &nbsp;|&nbsp;  -->
           <a class="mb-3" href="<?php echo base_url(); ?>uploads/<?php echo $settings->privace; ?>">Polityka prywatności</a></div>
         </div>
+
         <div class="col-12 col-md-6 text-center text-md-right">
+
+          <a href="tel:<?php echo $contact->phone1; ?>" class="footer_icon"><i class="fab fas fa-phone"></i></a>
+          <a href="https://www.google.com/maps/place/<?= $contact->address ?>,+<?= $contact->zip_code ?>+<?= $contact->city; ?>/ " class="footer_icon px-3"><i class="fab fas fa-map-marker-alt"></i></a>
+            <a href="mailto:<?php echo $contact->email1; ?>" class="footer_icon pr-3"><i class="fab fas fa-envelope"></i></a>
+
+          <i class="fas fa-grip-lines-vertical footer_icon pr-3"></i>
+
           <?php if($settings->fb_link != ''): ?>
           <a href="<?php echo $settings->fb_link; ?>" class="footer_icon"><i class="fab fa-facebook-f"></i></a>
           <?php endif; ?>
@@ -83,9 +91,14 @@
           <a href="<?php echo $settings->yt_link; ?>" class="footer_icon"><i class="fab fa-youtube"></i></a>
           <?php endif; ?>
         </div>
+
       </div>
     </div>
   </div>
+
+
+
+
   <div class="footer-copyright py-3">
     <div class="container">
       <div class="row">

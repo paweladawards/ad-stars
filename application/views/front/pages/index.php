@@ -1,7 +1,7 @@
 <!-- BANERY -->
 <?php if(!empty($baners)): ?>
 
-  <?php foreach(array_reverse($baners) as $baner): ?>
+  <?php foreach($baners as $baner): ?>
 
       <section class="slider_white pb-0 d-flex justify-content-center align-items-lg-center align-items-sm-center align-items-start baner-bg js-scroll" style="background-color: <?php echo $baner->color; ?>; background-image:url('<?= base_url().'uploads/'.$baner->photo ?>');">
         <div class="col-12 w-100">
@@ -21,11 +21,11 @@
 
 
 <!-- OFERTA WPISY -->
-<section class="slider_white pb-0 bg-white js-scroll">
-  <div class="row d-flex justify-content-center" >
+<section class="slider_white pb-0 bg-white ">
+  <div class="row d-flex justify-content-center js-scroll" >
   <h2 class="font_bold  mt-4 mb-4 pb-4 pt-4 text-dark display-4">NASZA OFERTA</h2>
   </div>
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center js-scroll">
     <?php if(!empty($oferta_active) && is_array($oferta_active)): ?>
     <?php foreach ($oferta_active as $v): ?>
     <div class="col-md-6 box-left p-0 m-0">
@@ -42,20 +42,21 @@
         <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
         <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg">
         <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/png">
-        <img src="<?= base_url().'uploads/'.$v->photo ?>" alt="<?= $v->alt ?>" class="img-fluid mt-3 offer_img">
+        <img src="<?= base_url().'uploads/'.$v->photo ?>" alt="<?= $v->alt ?>" class="img-fluid mt-3 offer_img icon-flip">
       </picture>
       </div>
     </div>
     <?php endforeach; ?>
-    <?php endif; ?>
+    <?php
+endif; ?>
   </div>
 </section>
 <!-- BLOG SECTION -->
-<section class="slider_white pb-0 bg-white text-white js-scroll">
-  <div class="row d-flex justify-content-center">
+<section class="slider_white pb-0 bg-white text-white" style="display: none;">
+  <div class="row d-flex justify-content-center js-scroll">
   <h2 class="font_bold mt-4 mb-4 pb-4 pt-4 text-dark display-4">BLOG</h2>
   </div>
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center js-scroll">
     <?php if(!empty($blog_active) && is_array($blog_active)):  ?>
       <?php foreach ($blog_active as $v): ?>
       <div class="col-md-6 box-left mb-3">

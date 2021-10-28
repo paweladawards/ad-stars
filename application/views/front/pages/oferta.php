@@ -11,7 +11,7 @@
   <div class="row">
     <?php foreach ($rows as $v): ?>
     <div class="col-md-6 box-left">
-      <div class="bg-muted p-5">
+      <div class="p-5 js-scroll">
         <h2 class="font_bold h1-responsive"><a href="<?php echo create_link('oferta_wpis', $v->title, $v->id); ?>" class="text-dark"><?php echo $v->title; ?></a></h2>
         <p class="font_regular"><?php echo $v->subtitle; ?></p>
         <div>
@@ -20,7 +20,7 @@
         <picture>
           <!-- <source srcset="<?= base_url().'uploads/'.$v->photo ?>.webp" type="image/webp"> -->
           <source srcset="<?= base_url().'uploads/'.$v->photo ?>" type="image/jpeg"> 
-          <img src="<?= base_url().'uploads/'.$v->photo ?>" class="img-fluid mt-3 offer_img" alt="<?= $v->alt ?>">
+          <img src="<?= base_url().'uploads/'.$v->photo ?>" class="img-fluid mt-3 offer_img icon-flip" alt="<?= $v->alt ?>">
         </picture>
       </div>
     </div>
